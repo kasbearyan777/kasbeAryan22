@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryan Kasbe | Portfolio</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Embedded CSS (Corrected & Combined) -->
+    <style>
+        /* ===========================
+           GLOBAL STYLES
+        =========================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #000000, #050505);
+            color: #ffffffa2;
+        }
+
+        /* ===========================
+           NAVBAR
+        =========================== */
+        .navbar {
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #d8d8d8;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #6a5acd;
+        }
+
+        /* ===========================
+           HERO SECTION
+        =========================== */
+        .hero-section {
+            padding: 80px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+        }
+
+        .accent-text {
+            color: #6a5acd;
+            font-weight: bold;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin: 10px 0;
+            color: #ffffff;
+        }
+
+        .description {
+            margin: 20px 0;
+            line-height: 1.6;
+            color: #dadada;
+        }
+
+        /* ===========================
+           SOCIAL ICONS
+        =========================== */
+        .social-links i {
+            font-size: 1.5rem;
+            margin-right: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            color: #ffffff;
+        }
+
+        .social-links i:hover {
+            color: #6a5acd;
+            transform: translateY(-4px);
+        }
+
+        /* ===========================
+           BUTTONS
+        =========================== */
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .primary-btn {
+            background: #6a5acd;
+            color: #ffffff;
+        }
+
+        .primary-btn:hover {
+            background: #5848c2;
+        }
+
+        .secondary-btn {
+            border: 2px solid #6a5acd;
+            color: #6a5acd;
+        }
+
+        .secondary-btn:hover {
+            background: #6a5acd;
+            color: #23005a;
+        }
+
+        /* ===========================
+           HERO IMAGE
+        =========================== */
+        .hero-image .image-container {
+            width: 330px;
+            height: 330px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 6px solid rgba(106,90,205,0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* ===========================
+           SKILLS SECTION
+        =========================== */
+        .skills-section {
+            padding: 90px 8%;
+            text-align: center;
+        }
+
+        .skills-section h2 {
+            font-size: 2.8rem;
+            color: #ffffff;
+            margin-bottom: 60px;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 35px 25px;
+            transition: 0.4s;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .skill-card i {
+            font-size: 3rem;
+            color: #6a5acd;
+            margin-bottom: 20px;
+        }
+
+        .skill-card h3 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            color: #cfcfcf;
+            font-size: 0.95rem;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(106,90,205,0.25);
+        }
+
+        /* Responsive */
+        @media(max-width: 900px) {
+            .hero-section {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-image {
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">MR. ARYAN KASBE</div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="hero-section" id="home">
+    <div class="hero-content">
+        <p>Hi, I'm <span class="accent-text">Aryan Kasbe</span></p>
+        <h1>Creative Web Designer</h1>
+        <p class="description">
+            I design and build modern, responsive, and user-friendly websites using HTML, CSS, and JavaScript.
+        </p>
+        <div class="social-links">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-github"></i>
+        </div>
+        <div class="buttons">
+            <a href="#contact" class="btn primary-btn">Hire Me</a>
+            <a href="#" class="btn secondary-btn">Download CV</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <div class="image-container">
+            <img src="C:\Users\Admin\Downloads\dbedaff6091694cef6121150e969e501.jpg" alt="Profile Image">
+        </div>
+    </div>
+</main>
+
+<section class="skills-section" id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+        <div class="skill-card">
+            <i class="fab fa-html5"></i>
+            <h3>HTML</h3>
+            <p>Semantic & structured markup</p>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-css3-alt"></i>
+            <h3>CSS</h3>
+            <p>Modern responsive design</p>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-js"></i>
+            <h3>JavaScript</h3>
+            <p>Dynamic interactions</p>
+        </div>
+        <div class="skill-card">
+            <i class="fas fa-pencil-ruler"></i>
+            <h3>UI / UX</h3>
+            <p>Clean & user-focused design</p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
